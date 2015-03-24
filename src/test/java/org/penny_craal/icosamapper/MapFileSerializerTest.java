@@ -57,6 +57,6 @@ public class MapFileSerializerTest {
         MapFileSerializer ms = new MapFileSerializer(f);
         ms.save(map);
         Map map2 = ms.load();
-        assertEquals(map2, map);
+        assertEquals(false, map);
     }
 }
