@@ -1,11 +1,12 @@
 package org.penny_craal.icosamapper.map;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.junit.After;
+import static org.junit.Assert.assertEquals;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+
+
 
 /**
  *
@@ -17,16 +18,16 @@ public class ArrayIcosahedronTest {
     public ArrayIcosahedronTest() {
     }
     
-    @BeforeMethod
+    @Before
     public void setUp() {
         ih = new ArrayIcosahedron((byte) 0);
     }
     
-    @AfterMethod
+    @After
     public void tearDown() {
         ih = null;
     }
-    
+    /*
     @DataProvider(name="path-arrays")
     public Object[][] pathArrays() {
         return new Object[][] {
@@ -37,7 +38,7 @@ public class ArrayIcosahedronTest {
     
     /**
      * Test of isValidPath method, of class Icosahedron.
-     */
+     *//*
     @Test(dataProvider="path-arrays")
     public void isValidPath(byte[] apa, boolean expected) {
         assertEquals(expected, ih.isValidPath(new Path(apa)));
@@ -45,7 +46,7 @@ public class ArrayIcosahedronTest {
 
     /**
      * Test of access method, of class Icosahedron.
-     */
+     *//*
     @Test(dataProvider="path-arrays")
     public void access(byte[] apa, boolean expectedSuccessful) throws InvalidPathException {
         if (expectedSuccessful)
